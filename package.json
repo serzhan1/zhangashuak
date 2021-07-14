@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+<<<<<<< HEAD
     "dev": "nodemon app.js",
+=======
+>>>>>>> 01d1de2d11e74ebe714520971ec5a36a67a1fa45
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build-watch": "webpack --mode development --watch",
