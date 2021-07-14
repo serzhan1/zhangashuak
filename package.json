@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build-watch": "webpack --mode development --watch",
-    "webapp:dev": "concurrently 'npm:build-watch' 'npm:start' "
+    "webapp:dev": "concurrently 'npm:build-watch' 'npm:dev' "
   },
   "author": "",
   "license": "ISC",
