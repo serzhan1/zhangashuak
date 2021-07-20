@@ -1,0 +1,40 @@
+.about-us{
+  display: block;
+  background-color: $about-us-background;
+}
+.about-us-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 15px;
+  gap: 30px;
+}
+.about-us__title{
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.about-us__subtitle{
+  font-size: 20px;
+  margin: 10px 0px;
+}
+.about-us__list{
+  margin-left: 25px;
+  margin-bottom: 5px;
+  list-style: circle;
+  line-height: 25px;
+  font-size: 14px;
+}
+.about-us__video{
+  display: block;
+  width: 100%;
+}
+
+@media(max-width: 767px){
+  .about-us-content{
+    grid-template-columns: 1fr;
+  }
+  .about-us__video{
+    height: 280px;
+  }
+}

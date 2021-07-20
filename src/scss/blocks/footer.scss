@@ -1,0 +1,89 @@
+.help-us{
+  background-color: #484454;
+  margin-top: 40px;
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.help-us__buttons{
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+}
+.help-us__help-btn{
+  display: inline-block;
+  background-color: $green;
+  color: $black;
+  padding: 20px 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  &:hover{
+    background-color: $orange;
+  }
+}
+.help-us__advice-btn{
+  display: inline-block;
+  background-color: $yellow;
+  color: $black;
+  padding: 20px 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  &:hover{
+    background-color: $orange;
+  }
+}
+.footer{
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+.footer__top{
+  background-color:  #1f1e1d;
+  padding: 50px 0;
+}
+.footer__name{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.footer__address{
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.footer__tel{
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+.footer__tel a{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  &:hover{
+    color: $orange;
+  }
+}
+.footer__bottom{
+  background-color: #191919;
+  padding: 25px 0;
+}
+.footer__copyright{
+  letter-spacing: .3px;
+}
+
+@media (max-width: 560px){
+  .help-us__buttons{
+    padding: 20px;
+  }
+  .help-us__help-btn{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .help-us__advice-btn{
+    width: 100%;
+  }
+}

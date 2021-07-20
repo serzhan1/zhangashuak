@@ -1,14 +1,29 @@
-<h1>
-    <%- title -%>
-</h1>
-<footer>
-    <h1>Copyright ZhangaShuak - 2019</h1>
+<div class="help-us">
+    <h2>Еріктінің өтініші</h2>
+    <div class="help-us__buttons wrap">
+        <div class="help-us__help-btn">
+            <a href="/contacts">ОНЛАЙН Қайырымдылық</a>
+        </div>
+        <div class="help-us__advice-btn">
+            <a id="footerAdviceBtn" href="#advice">өтініш қалдыру</a>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="footer__name">«ZHANGA SHUAK» ҚОҒАМДЫҚ ҚОРЫ</div>
+        <div class="footer__address">Қазақстан, 160000, Шымкент қаласы, Қонаев даңғылы, 5/6</div>
+        <div class="footer__tel">Тел.:<a href="tel:87785576939"> +7 (778) 557 69 39</a></div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__copyright">© 2019 «ZHANGA SHUAK» ҚОҒАМДЫҚ ҚОРЫ</div>
+    </div>
 </footer>
 
+<%- include('./modalbox')  %> 
 </body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.7.1/firebase-app.js"></script>
-<script src="/__/firebase/init.js"></script>
-<script src="<%= manifest['main.js'] %> "></script>
+<script src="/<%= manifest['main.js'] %> "></script>
 
-</html>
+    </html>

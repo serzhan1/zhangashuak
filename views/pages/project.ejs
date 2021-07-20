@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+
+<%- include('../partials/header') %>
+
+<div class="project-page wrap">
+  <div class="project-page__title">
+    <h1><%= project.title%> </h1>
+  </div>
+  <div id="primary-slider" class="splide primary-slider">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <% project.contentImages.forEach(e => { %>
+          <li class="splide__slide"><img src="<%= e %> " alt=""></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+  <div id="secondary-slider" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <% project.contentImages.forEach(e => { %>
+          <li class="splide__slide"><img src="<%= e %> " alt=""></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+  <div class="project-page__content">
+    <div class="project-page__content-title">
+      <h4><%= project.subtitle %> </h4>
+    </div>
+    <div class="project-page__content-text">
+      <p><%= project.text %></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<%- include('../partials/footer') %>

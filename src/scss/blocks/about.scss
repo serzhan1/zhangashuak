@@ -1,0 +1,27 @@
+.about{
+  display: block;
+}
+.about__title{
+  @extend %page-title;
+}
+.about__info-text{
+  padding: 20px;
+  font-size: 18px;
+}
+.about__help{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+.about__help-stats{
+  text-align: center;
+}
+.about__numbers{
+  font-size: 72px;
+  color: $green;
+}
+@media(max-width: 480px){
+  .about__help{
+    gap: 10px;
+  }
+}

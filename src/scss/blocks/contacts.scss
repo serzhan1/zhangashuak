@@ -1,0 +1,20 @@
+.contacts__title{
+  @extend %page-title
+}
+.contacts__info{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 0 25px;
+}
+.contacts__subtitle{
+  margin-top: 40px;
+}
+.contacts__map{
+  height: 350px;
+}
+@media (max-width: 767px){
+  .contacts__info{
+    grid-template-columns: 1fr;
+  }
+}

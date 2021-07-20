@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+*, :after, :before, input[type=search] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333
+}
+
+a:focus, a:hover {
+  outline: 0;
+  text-decoration: none
+}
+p{
+  font-family: 'Roboto Condensed', 'Arial', sans-serif;
+}
+h1{
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 24px;
+}
+h4{
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 10px;
+  font-weight: 400;
+}

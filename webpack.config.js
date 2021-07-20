@@ -9,25 +9,29 @@ const filename = (ext) => isProduction ? `[name].[contenthash].${ext}` : `[name]
 
 const config = {
   context: path.resolve(__dirname, 'src'),
-  entry: ['./js/index.js', './scss/main.scss'],
+  entry: {
+    main:['@babel/polyfill', './js/index.js', './scss/main.scss'],
+    jssor: './js/jssor.slider-27.5.0.min.js',
+    cbpFWtabs: './js/cbpFWtabs',
+  },
   output: {
     filename: `js/${filename('js')}`,
     path: path.resolve(__dirname, 'public'),
     publicPath: "",
-    clean: true
+    clean: true 
   },
-  devServer: {
-    port: 3000
-  },
+
   plugins: [
     new WebpackManifestPlugin(),
     new BabelMinifyPlugin({}, {
       comments: false
     }),
+
     new MiniCssExtractPlugin({
       filename: `css/${filename('css')}`
-    })
+    }),
   ],
+
   module: {
     rules: [
       {
@@ -37,33 +41,68 @@ const config = {
       {
         test: /\.(css|scss)$/i,
         use: [
+          MiniCssExtractPlugin.loader,
           {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader',
+            loader:'css-loader',
             options: {
-              sourceMap: true
+              url:false
             }
           },
           'postcss-loader',
+          'sass-loader'
+        ]
+      },
+
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
           {
-            loader: 'sass-loader',
+            loader: 'file-loader',
             options: {
-              sourceMap: true
+              name: '[path][name].[ext]'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4
+              },
+            }
+          },
+        ],
+      },
+
+      {
+        test: /\.(ico|pdf)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: './assets',
+              name: '[name].[ext]'
             }
           }
         ]
-      }
+      },
     ]
   }
+
 }
 
-
 if (isProduction) {
-  // Minify
+  config.module.rules.push()
 } else {
-  // Logging?
+  config.devtool = 'source-map';
 }
 
 module.exports = config;

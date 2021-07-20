@@ -1,3 +1,22 @@
-body {
-  background-color: yellow;
-}
+@charset "UTF-8";
+
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "core";
+
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/main-slider.scss";
+@import "blocks/help-stage.scss";
+@import "blocks/projects.scss";
+@import "~@splidejs/splide/dist/css/splide-core.min.css";
+@import "~@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
+@import "blocks/sponsors.scss";
+@import "blocks/about-us.scss";
+@import "blocks/about.scss";
+@import "blocks/converts.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";
+@import "blocks/modalbox.scss";

@@ -1,0 +1,91 @@
+.menu{
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 20px;
+  border: 1px solid $smokeGrey;
+}
+.menu__list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__link{
+  text-transform: uppercase;
+  padding: 25px;
+  text-transform: uppercase;
+  color:#777777;
+  text-decoration: none;
+  display: block;
+  &:hover,
+  :focus{
+    color: $darkRed;
+    border-bottom: 2px solid $darkRed;
+  }
+}
+.menu__link_active{
+  color: $darkRed;
+  border-bottom: 2px solid $darkRed;
+}
+
+.menu__hamburger{
+  width: 45px;
+  height: 32px;
+  margin-right: auto;
+  display: none;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0px;
+}
+.menu__hamburger span{
+  height: 5px;
+  display: block;
+  border-radius: 50px;
+  background-color:$darkRed;
+  margin: 8px 0;
+}
+.menu__hamburger::before, .menu__hamburger::after{
+  height: 5px;
+  display: block;
+  border-radius: 50px;
+  background-color: $darkRed;
+  content: "";
+}
+@media(max-width:768px){
+  .menu{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-image: url('../img/mobile-logo.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+  .menu__list{
+    display: none;
+    margin-top: 14px;
+  }
+  .menu__link{
+    padding: 10px 0;
+  }
+  .menu__link:hover{
+    background-color: transparent;
+  }
+  .menu__hamburger{
+    display: block;
+  }
+  .menu--active{
+    background-image: none;
+  }
+  .menu--active .menu__hamburger span{
+    display: none;
+  }
+  .menu--active .menu__hamburger::after{
+    transform: rotate(45deg);
+  }
+  .menu--active .menu__hamburger::before{
+    transform: rotate(-45deg) translate(-3px,3px);
+  }
+  .menu--active .menu__list{
+    display: block;
+  }
+}

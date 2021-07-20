@@ -1,0 +1,81 @@
+.header{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.header__logo{
+  max-width: 100%;
+  height: auto;
+}
+.header__phone-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phone-link{
+  font-size: 30px;
+  text-decoration: none;
+  color: $green;
+  font-weight: 700;
+  &:hover{
+    color: $orange;
+  }
+}
+.header__callback-buttons{
+  display: block;
+  padding: 40px 0;
+  text-align: center;
+}
+.help-btn{
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: $yellow;
+  &:hover{
+    background-color: $orange;
+  }
+}
+.advice-btn{
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: $green;
+  &:hover{
+    background-color: $orange;
+  }
+}
+@media (max-width: 1075px){
+  .help-btn{
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+  .advice-btn{
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 879px){
+  .header__callback-buttons{
+    padding: 20px;
+  }
+  .help-btn{
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .advice-btn{
+    width: 100%;
+  }
+}
+@media (max-width: 767px){
+  .header{
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .header__callback-buttons{
+    display: none;
+  }
+  .header__logo{
+    display: none;
+  }
+}

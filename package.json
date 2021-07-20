@@ -5,10 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-<<<<<<< HEAD
     "dev": "nodemon app.js",
-=======
->>>>>>> 01d1de2d11e74ebe714520971ec5a36a67a1fa45
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build-watch": "webpack --mode development --watch",
@@ -16,11 +13,18 @@
   },
   "author": "",
   "license": "ISC",
+  "browsersList": "> 0.25%, not dead",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@splidejs/splide": "^2.4.21",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "joi": "^17.4.1",
+    "jquery": "^3.6.0",
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0",
+    "should-send-same-site-none": "^2.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -31,6 +35,8 @@
     "concurrently": "^6.2.0",
     "css-loader": "^5.2.6",
     "cssnano": "^5.0.6",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12",

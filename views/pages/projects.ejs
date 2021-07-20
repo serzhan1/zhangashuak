@@ -1,0 +1,26 @@
+<%- include('../partials/head') %>
+
+<%- include('../partials/header') %>
+<div class="projects-page wrap">
+  <div class="projects-page__title">
+    <h1>Жобалар</h1>
+  </div>
+  <div class="project-boxes">
+    <% content.forEach(el => { %>
+      <div class="project-box">
+        <div class="project-box__img" style="background-image: url('<%- el.image%>');"></div>
+        <div class="project-box__info">
+          <div class="project-box__name">
+            <%- el.title  %> 
+          </div>
+          <div class="project-box__description"><%- el.description%></div>
+          <div class="project-box__read-more">
+            <a href="/projects/<%- el.name %>">Толығырақ</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
