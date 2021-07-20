@@ -1,8 +1,8 @@
 {
-  "main.css": "css/main.css",
-  "main.js": "js/main.js",
-  "jssor.js": "js/jssor.js",
-  "cbpFWtabs.js": "js/cbpFWtabs.js",
+  "main.css": "css/main.1bc07343ea353b2c10cc.css",
+  "main.js": "js/main.79bea0fb7777c935c765.js",
+  "jssor.js": "js/jssor.55ab41fd8ee957ab8cec.js",
+  "cbpFWtabs.js": "js/cbpFWtabs.2834b1981f49363781f1.js",
   "assets/otchet2018.pdf": "assets/otchet2018.pdf",
   "img/projects/j9.jpg": "img/projects/j9.jpg",
   "img/projects/j11.jpg": "img/projects/j11.jpg",
@@ -53,9 +53,5 @@
   "img/zhanga.png": "img/zhanga.png",
   "img/slider/p2-thumb.jpg": "img/slider/p2-thumb.jpg",
   "img/sponsors/logo3.png": "img/sponsors/logo3.png",
-  "img/slider/p3-thumb.jpg": "img/slider/p3-thumb.jpg",
-  "main.css.map": "css/main.css.map",
-  "main.js.map": "js/main.js.map",
-  "jssor.js.map": "js/jssor.js.map",
-  "cbpFWtabs.js.map": "js/cbpFWtabs.js.map"
+  "img/slider/p3-thumb.jpg": "img/slider/p3-thumb.jpg"
 }
