@@ -17,11 +17,11 @@ const root = require('./routes'),
 app.set('views', path.join(__dirname,'views'))
 app.set('view engine', 'ejs')
 
-// app.use(morgan(process.env.LOG_LEVEL))
+app.use(morgan(process.env.LOG_LEVEL))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static(path.resolve(__dirname,'public')))
-// app.use(shouldSendSameSiteNone);
+
 
 app.use('/',root)
 app.use('/about',about)
